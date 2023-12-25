@@ -29,4 +29,5 @@ public class UserController {
     public String deletUser(){
         return "user Lulz deleted";
     }
+
 }

@@ -5,8 +5,11 @@ import com.example.sample_project.entity.User;
 import com.example.sample_project.repo.UserRepo;
 import jakarta.transaction.Transactional;
 import org.modelmapper.ModelMapper;
+import org.modelmapper.TypeToken;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Service
 @Transactional
@@ -19,5 +22,17 @@ public class UserService {
     public UserDTO saveUser(UserDTO UserDTO){
         userRepo.save(modelMapper.map(UserDTO, User.class));
         return UserDTO;
+    }
+    public List<UserDTO> getUser(){
+        List<User> userList = userRepo.findAll();
+        return modelMapper.map(userList,new TypeToken<List<UserDTO>>(){}.getType());
+    }
+    public UserDTO updateUser(UserDTO UserDTO){
+        userRepo.save(modelMapper.map(UserDTO, User.class));
+        return UserDTO;
+    }
+    public boolean deleteUser(UserDTO userDTO){
+        userRepo.delete(modelMapper.map(userDTO,User.class));
+        return true;
     }
 }

@@ -30,3 +30,18 @@ public class PlantService {
     }
 
 }
+//The use of @Autowired in Spring is part of the dependency injection mechanism
+
+//@Autowired annotation is used to inject an instance of the ModelMapper class
+// into the PlantService class.
+// ModelMapper is a library commonly used for mapping or converting
+// objects from one type to another
+
+//By injecting the repository, the PlantService class can use methods
+//provided by PlantRepo to perform database operations
+//like saving and retrieving plant data.
+
+//The concept of a transaction ensures that a series of
+// database operations are executed
+// in an atomic, consistent, isolated, and durable manner,
+// often abbreviated as ACID properties:

@@ -24,6 +24,10 @@ public class UserService {
         return UserDTO;
     }
     public List<UserDTO> getUser(){
+        User user1 = new User();
+        System.out.println("user1.getId()**********");
+        System.out.println(user1.getId());
+        System.out.println(user1.getName());
         List<User> userList = userRepo.findAll();
         return modelMapper.map(userList,new TypeToken<List<UserDTO>>(){}.getType());
     }
@@ -36,7 +40,9 @@ public class UserService {
         return true;
     }
     public UserDTO getUserByUserID(String UserID){
-        User user = userRepo.getUserByUserID(UserID);
+//        User user = userRepo.getUserByUserID(UserID);
+        User user = userRepo.getOne(Integer.valueOf(UserID));
+
         return modelMapper.map(user,UserDTO.class);
     }
 

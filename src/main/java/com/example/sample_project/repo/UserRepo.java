@@ -12,6 +12,9 @@ public interface UserRepo extends JpaRepository<User,Integer> {
 
     @Query(value = "select * from User where ID = ?1 and ADDRESS = ?2 ",nativeQuery = true)
     User getUserByUserIDAndAddress(String userID,String address);
+
+
+
 }
 //spring Data JPA is a part of the larger Spring Data project and specifically focuses
 // on data access using the Java Persistence API (JPA)

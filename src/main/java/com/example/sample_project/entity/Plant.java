@@ -18,3 +18,7 @@ public class Plant {
     private int price;
 
 }
+//@Data: This Lombok annotation combines several other annotations
+// (@ToString, @EqualsAndHashCode, @Getter, and @Setter) to generate common methods
+// such as toString(), equals(), hashCode(), and getters and setters
+// for all fields in the class.

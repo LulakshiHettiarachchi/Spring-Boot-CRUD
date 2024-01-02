@@ -44,3 +44,17 @@ public class UserController {
     }
 
 }
+//CORS is a security feature implemented by web browsers that restricts web pages from making
+// requests to a different domain than the one that served the web page.
+
+//    This annotation is applied at the class
+//level, meaning that CORS will be enabled
+//for all endpoints within the UserController.
+//@CrossOrigin(origins = "http://allowed-origin.com") allow request only  from this domain
+
+////The use of @Autowired in Spring is part of the dependency injection mechanism
+//create object instance and give accese to its methods
+
+//DAO stands for Data Access Object, The main goal of this
+// layer is access(Query) data efficiently from database and
+// provide services to the Service layer
